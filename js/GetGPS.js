@@ -4,7 +4,7 @@ function GetCurrentPosition() {
 	navigator.geolocation.getCurrentPosition(
 		function(position) {
 			const serializedPos = `${[position.coords.latitude, position.coords.longitude]}`
-			SendMessage('LocationManager', 'ShowLocation', serializedPos); 
+			unityInstance.SendMessage('LocationManager', 'ShowLocation', serializedPos); 
 		}
 	);
 }
